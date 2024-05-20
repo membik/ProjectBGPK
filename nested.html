@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Вложенные циклы в C++</title>
+	<link rel="stylesheet" href="styles/style.css">
+	<link rel="stylesheet" href="styles/mainMenu.css">
+	<link rel="stylesheet" href="styles/SyntaxHighlighting.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css">
+	<link rel="stylesheet" href="css/github.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/vs2015.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+<body>
+	<center>
+	<header>
+		<div class="ALL_header_menu"> 
+		<div class="Logo">
+			<a href="index.html"><i class="fa fa-home"></i></a>
+		</div>  
+		<div class="Top_menu">
+			<ul>
+				<div class="dropdown">
+					<li><a href="index3.html">Операторы</a></li>
+						 <div class="dropdown-content">
+	    				 	<a href="if_else.html">Оператор if и else</a>
+	   						<a href="ternal.html">Тернальный оператор</a>
+	   						<a href="switch.html">Оператор switch</a>
+	   						<a href="break.html">break и continue</a>
+	    				 </div>
+	    		</div>
+	    		<div class="dropdown1"> 
+	    			<li><a href="index1.html">Циклы</a></li>
+	    			 	<div class="dropdown-content1">
+	    				 	<a href="for.html">Цикл for</a>
+	   						<a href="while.html">Циклы while и do while</a>
+	   						<a href="break.html">Вложенные констуркции в циклах</a>
+	    				</div>
+				</div>
+				<li><a href="index2.html">Практика</a></li>
+			</ul>
+		</div>
+    </div>
+	</header>
+	</center>
+
+	<div class="text1">
+		<div class="text_block" id="block4">
+			<div class="block_text1">
+				<h1>Вложенные циклы в C++</h1>
+				<p>Мы с вами успели познакомиться с тремя конструкциями повторения в языке программирования C++. Это циклы  for, while и do while. Если вы обратили внимание, вложение конструкций логического выбора if и else в циклы уже применялось. Сейчас же мы рассмотрим вложенные циклы – это когда в теле одного цикла (внешнего) размещается другой цикл (внутренний). Таких вложенных циклов во внешнем цикле может быть несколько.
+					<br><br>
+				По своей структуре, вложенные циклы напоминают мне коробки разных размеров, как на нашем рисунке. Эти коробки легко можно сложить друг в друга и поместить в одну большую коробку. Так и с циклами. Программе, чтобы добраться к вложенному циклу, необходимо сначала приступить к выполнению внешнего цикла (открыть крышку большой коробки), выполнить, то что прописано в коде до вложенного цикла и потом уже приступить к выполнению этого  цикла.
+					<br><br>
+				Есть один интересный распространённый пример, для демонстрации работы вложенных циклов. Рассмотрим его: применяя циклы, необходимо нарисовать прямоугольник размером  5 х 15 из символов @.</p>
+			</div>
+		</div>
+	</div>
+		<pre><code class="обозначение_языка">	
+		#include <iostream>
+		using namespace std;
+		 
+		int main()
+		{
+			 for (int i = 0; i < 5; i++) // этот цикл отвечает за кол-во строк
+			 {
+			 for (int j = 0; j < 15; j++) // этот - за кол-во символов в каждой строке
+			 {
+			 cout << '@';  
+			 }
+			 cout << endl; // переход на строку ниже
+			 }
+			 return 0;
+		}
+		</code></pre>
+
+	<div class="text1">
+		<div class="text_block" id="block4">
+			<div class="block_text1">
+				<p>Сначала начинает выполняться цикл for в строке 6. Так как в его теле ничего не прописано до второго цикла, программа сразу приступает к выполнению этого вложенного цикла – строки 8 – 11. В результате его выполнения, на экране в одной строке отображаются 15 символов @ и происходит выход из него. Тут сработает cout  в строке 12, управляющая переменная i увеличится на единицу и продолжится выполнение главного и вложенного циклов. То есть снова 15 символов на экране и переход на строку ниже. Так будет сделано 5 раз, после чего программа завершит работу.
+					<br><br>
+				Можно эту задачу немного усложнить. Теперь пусть символ для печати фигуры выбирает пользователь, посредством ввода с клавиатуры. Он же выберет размер – ширину и высоту. Еще одно новшество – фигура должна быть пустой, а не заполненной, как в нашем предыдущем примере. То есть она должна состоять только из контура. Вот наше решение:</p>
+			</div>
+		</div>
+	</div>
+
+	<pre><code class="обозначение_языка">
+	#include <iostream>
+	using namespace std;
+	 
+	int main()
+	{
+	 setlocale(LC_ALL, "rus");
+	 
+	 int lines = 0;
+	 int symbInLines = 0;
+	 char symbol = 0;
+	 
+	 cout << "Введите символ: ";
+	 cin >> symbol;
+	 cout << "Количество строк: ";
+	 cin >> lines;
+	 cout << "Количество символов в строке: ";
+	 cin >> symbInLines;
+	 cout << endl;
+	 
+	 for (int i = 1; i <= lines; i++)
+	 {
+	 if (i == 1 || i == lines) // 1-я и последняя строка
+	 {
+	 for (int j = 1; j <= symbInLines; j++)
+	 {
+	 cout << symbol; // сплошная из символов
+	 }
+	 }
+	 else // все строки между первой и заключительной
+	 {
+	 cout << symbol; // показать один символ
+	 for (int j = 1; j <= symbInLines - 2; j++)
+	 {
+	 cout << ' '; // пробелы в строке (symbInLines - 2) раз
+	 }
+	 cout << symbol; // показать ещё один символ
+	 }
+	 cout << endl; // новая строка
+	 }
+	 cout << endl;
+	 return 0;
+	}
+	</code></pre>
+
+		<div class="text1">
+		<div class="text_block" id="block4">
+			<div class="block_text1">
+				<p>Надеюсь урок был для вас полезен. Вложенные конструкции в программировании на C++ встречаются достаточно часто.</p>
+			</div>
+		</div>
+	</div>
+	<footer>
+  	</footer>
+</body>
+</html>

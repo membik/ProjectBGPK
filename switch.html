@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Оператор switch</title>
+	<link rel="stylesheet" href="styles/style.css">
+	<link rel="stylesheet" href="styles/mainMenu.css">
+	<link rel="stylesheet" href="styles/SyntaxHighlighting.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css">
+	<link rel="stylesheet" href="css/github.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/vs2015.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+<body>
+	<center>
+	<header>
+		<div class="ALL_header_menu"> 
+		<div class="Logo">
+			<a href="index.html"><i class="fa fa-home"></i></a>
+		</div>  
+		<div class="Top_menu">
+			<ul>
+				<div class="dropdown">
+					<li><a href="index3.html">Операторы</a></li>
+						 <div class="dropdown-content">
+	    				 	<a href="if_else.html">Оператор if и else</a>
+	   						<a href="ternal.html">Тернальный оператор</a>
+	   						<a href="switch.html">Оператор switch</a>
+	   						<a href="break.html">break и continue</a>
+	    				 </div>
+	    		</div>
+	    		<div class="dropdown1"> 
+	    			<li><a href="index1.html">Циклы</a></li>
+	    			 	<div class="dropdown-content1">
+	    				 	<a href="for.html">Цикл for</a>
+	   						<a href="while.html">Циклы while и do while</a>
+	   						<a href="nested.html">Вложенные констуркции в циклах</a>
+	    				</div>
+				</div>
+				<li><a href="index2.html">Практика</a></li>
+			</ul>
+		</div>
+    </div>
+	</header>
+	</center>
+
+	<div class="text1">
+		<div class="text_block" id="block4">
+			<div class="block_text1">
+				<h1>Оператор switch в C++</h1>
+				<p>Работу оператора множественного выбора switch в C++ мы рассмотрим в решении такой задачи: Допустим, у пользователя есть нумерованный список станций метро Барселоны. Необходимо написать код, в котором будет реализован диалог с пользователем, а именно предложено ввести номер станции метро. После ввода номера станции, надо показать на экран её название и время в пути. Если же станции с таким номером нет, сообщить об этом и предложить ввести номер снова. Приступим:</p>
+			</div>
+		</div>
+	</div>
+		<pre><code class="обозначение_языка">
+	#include <iostream>
+	using namespace std;
+	 
+	int main()
+	{
+		 setlocale(LC_ALL, "rus");
+		 
+		 int answer = 0; // будет хранить выбор пользователя
+		 bool var = true; // управляющая переменная цикла do while
+		 
+		 cout << "Введите номер станции метро, для расчета времени в пути (от 1 до 5): ";
+		 
+		 do{
+		 cin >> answer; // ввод значения
+		 
+		 switch (answer) // switch принимает переменную answer и ищет подходящий case
+		 {
+		 case 1:  // если answer равно 1, на экран выйдут сообщения этого case
+		 cout << "Станция метро Trinitat Nova: ";
+		 cout << "Время в пути - 15 мин." << endl;
+		 break; // выход из switch. иначе будет переход case(2)  и т.д.
+		 case 2: // если answer равно 2
+		 cout << "Станция метро Casa de l’Aigua: ";
+		 cout << "Время в пути - 19 мин." << endl;
+		 break;
+		 case 3:
+		 cout << "Станция метро Torre Baro Vallbona: ";
+		 cout << "Время в пути - 25 мин." << endl;
+		 break;
+		 case 4:
+		 cout << "Станция метро Ciutat Meridiana: ";
+		 cout << "Время в пути - 30 мин." << endl;
+		 break;
+		 case 5:
+		 cout << "Станция метро Can Cuias: ";
+		 cout << "Время в пути - 38 мин." << endl;
+		 break;
+		 default: // если ни один case не сработал, сработает default
+		 cout << "Станции под номером " << answer << " нет! ";
+		 cout << "Сделайте правильный выбор (от 1 до 5): ";
+		 }
+		 // если введено правильное значение (от 1 до 5)
+		 // default не сработает и выполнится блок if
+		 // переменная var примет значение false
+		 // и цикл do while не повторится
+		 if (answer >= 1 && answer <= 5) 
+		 var = false;  
+		 } while (var); //цикл повторится, пока var не изменит значение на false
+		 
+		 return 0;
+	}
+		</code></pre>
+
+	<div class="text1">
+		<div class="text_block" id="block4">
+			<div class="block_text1">
+				<p>До строки 13 – всё понятно: объявление необходимых переменных, вывод вопроса на экран, и вход в цикл do while. В строке 14 мы получили значение  answer, которое ввёл пользователь. Далее смотрите, как интересно работает switch() : в круглых скобках передаём ему answer (строка 16) и возле каждого слова  case  записываем возможные значения answer, которые может   ввести пользователь (1, 2, 3 …).
+					<br><br>
+				После каждого case  вы видите оператор : , он обязателен. За ним следуют команды, которые должны быть выполнены, если значение case  совпадет со значением answer. Оператор break  в конце каждого блока case  так же является обязательным. Он показывает компилятору, что если этот case был выполнен, то надо выйти из switch().  То есть фактически, когда выполняется switch () начинается перебор и поиск необходимого case.
+				<br><br>
+				Если  answer  равно 1, сработает case 1 и на экран будет показано то, что в нем прописано до ключевого слова  break, а все остальные case, будут проигнорированы. Если answer  равно 2 – выполнится только case 2 и произойдет выход из switch(). А что если ни одно значение блоков case не совпадет, с тем значением, что принял switch() (в нашем случае answer)? Для этого предусмотрен блок  default. До него доходит дело, как раз тогда, когда ни один case не отработал и, соответственно, не отработал ни один  break  этих блоков.
+				<br><br>
+				В нашем примере, он сработает если значение, которое введет пользователь, будет <1 или >5. Тогда пользователь увидит на экране сообщение о том, что станции метро с таким номером нет и необходимо повторить ввод.
+					<br><br>
+				В цикле, мы постоянно проверяем значение answer, которое введено пользователем. Делаем это с помощью if . Если значение находится в рамках подходящего нам диапазона (от 1 до 5 ), то управляющей переменной var будет присвоено  значение 0. В этом случае, пользователю больше не будет предложено ввести новое значение.</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="text1">
+		<div class="text_block" id="block4">
+			<div class="block_text1">
+				<h1>Синтаксис</h1>
+				<p>Блок  default  можно расположить в любом месте блока switch()  Например между первым и вторым case . Его код в любом случае выполнится только тогда, если не найдется нужного значения в  блоках case. Но, советую вам располагать его именно в конце, как делают большинство программистов. Это такое негласное правило.
+					<br><br>
+        		в нижнем блоке switch(), будь то  default или case, оператор break   можно не указывать. Так сделано в нашем примере. Но следует помнить, что во всех остальных break обязателен!
+        		<br><br>
+        		default  не является обязательным. Его в switch()  может и не быть вовсе. В таком случае, если ни одно значение блоков case  не совпадет с тем, что принял switch() , программа просто перейдет на следующую строку кода, расположенную под switch()
+        		<br><br>
+    			иногда блоки case  проверяют символьные, а не числовые значения. Тогда эти символы необходимо брать в одинарные кавычки –  case ‘b’: ,  case ‘G’: ,  case ‘+’ и т.д.</p>
+			</div>
+		</div>
+	</div>
+
+	<pre><code class="обозначение_языка">
+	switch (выражение) 
+	{
+		case значени_1:
+			код1;
+			break
+		case значение_2:
+			код2;
+			break;
+		case значение_n:
+			кодn;
+			break
+		default:
+			код;
+	}
+	</code></pre>
+
+
+
+	<footer>
+  	</footer>
+</body>
+</html>

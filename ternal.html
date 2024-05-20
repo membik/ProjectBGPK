@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Тернарный оператор</title>
+	<link rel="stylesheet" href="styles/style.css">
+	<link rel="stylesheet" href="styles/mainMenu.css">
+	<link rel="stylesheet" href="styles/SyntaxHighlighting.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css">
+	<link rel="stylesheet" href="css/github.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/vs2015.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+<body>
+	<center>
+	<header>
+		<div class="ALL_header_menu"> 
+		<div class="Logo">
+			<a href="index.html"><i class="fa fa-home"></i></a>
+		</div>  
+		<div class="Top_menu">
+			<ul>
+				<div class="dropdown">
+					<li><a href="index3.html">Операторы</a></li>
+						 <div class="dropdown-content">
+	    				 	<a href="if_else.html">Оператор if и else</a>
+	   						<a href="ternal.html">Тернальный оператор</a>
+	   						<a href="switch.html">Оператор switch</a>
+	   						<a href="break.html">break и continue</a>
+	    				 </div>
+	    		</div>
+	    		<div class="dropdown1"> 
+	    			<li><a href="index1.html">Циклы</a></li>
+	    			 	<div class="dropdown-content1">
+	    				 	<a href="for.html">Цикл for</a>
+	   						<a href="while.html">Циклы while и do while</a>
+	   						<a href="nested.html">Вложенные констуркции в циклах</a>
+	    				</div>
+				</div>
+				<li><a href="index2.html">Практика</a></li>
+			</ul>
+		</div>
+    </div>
+	</header>
+	</center>
+
+	<div class="text1">
+		<div class="text_block" id="block4">
+			<div class="block_text1">
+				<h1>Тернарный оператор ? : в C++</h1>
+				<p>Надеюсь, вы хорошо  разобрались с темой операторы выбора if и else и вам не составило большого труда решить задачи по этой теме. В этом же уроке мы продолжаем изучать основы программирования на C++ и познакомимся еще с одним  оператором выбора (ветвления) – это тернарный оператор  ?  :
+					<br><br>
+				Используется он обычно в тех случаях, если условие и код, который надо выполнить, в результате проверки условия, очень простые. К примеру, спросить у пользователя хочет он продолжить работать в программе или же хочет выйти из неё. Синтаксис такой:</p>
+			</div>
+		</div>
+	</div>
+		<pre><code class="обозначение_языка">
+		Условие ? команда1 : команда 2;
+		</code></pre>
+
+	<div class="text1">
+		<div class="text_block" id="block4">
+			<div class="block_text1">
+				<p>Вначале надо  записать необходимое нам условие и за ним поставить знак вопроса ? .  Далее, в этой же строке, после знака вопроса пишем первую простую команду (код), которая будет выполняться, если условие вернет истину (true). После этой команды ставим двоеточие  :  и пишем вторую команду (код). Эта вторая команда после двоеточия, выполнится только в том случае, если условие возвращает ложь (false).
+				<br><br>
+				Пример. Допустим пользователь снимает деньги в банкомате. Он провел эту операцию и на экране должен появиться вопрос: “Вы хотите выполнить другую операцию?”  Пользователю остается сделать выбор (да или нет) и нажать соответствующую кнопку. Организуем этот выбор в следующей программе:</p>
+			</div>
+		</div>
+	</div>
+
+	<pre><code class="обозначение_языка">
+	#include <iostream>
+	using namespace std;
+
+	int main()
+	{
+		setlocale(LC_ALL, "rus");
+
+		// значение этой переменной будет изменять пользователь
+		bool variable = true; 
+
+		cout << "Выполнение каких-то транзакций по счету карты...\n";
+		cout << "Вы хотите выполнить другую операцию (1 - да, 0 - нет)? ";
+		cin >> variable;
+
+		variable == 1 ? cout << "Выберите операцию!\n..........\n\n" : cout << "До свидания! Не забудьте взять чек!\n\n";
+
+		return 0;
+	}
+	</code></pre>
+
+	<div class="text1">
+		<div class="text_block" id="block4">
+			<div class="block_text1">
+				<p>Пользователь делает выбор и вводит значение – строка 13. А в строке 15 мы проверяем введенное значение. Если условие variable == 1 возвращает true (то есть если переменная действительно равна 1), то выполнится код, расположенный после знака вопроса ? . А тот, что находится после двоеточия : – игнорируется. Иначе, если пользователь ввел 0, игнорируется код расположенный между ? и :  , а выполняется второй код.  
+				<br><br><br>
+				Вот еще один интересный пример. В нем, с помощью тернарного оператора, определяется минимальное и максимальное число из двух значений, которые введет пользователь.</p>
+			</div>
+		</div>
+	</div>
+	<pre><code class="обозначение_языка">
+	#include <iostream>
+	using namespace std;
+	 
+	int main()
+	{
+		 setlocale(LC_ALL, "rus");
+		 
+		 int firstDigit = 0;
+		 int secondDigit = 0;
+		 int max = 0;
+		 int min = 0;
+		 
+		 cout << "Введите firstDigit - первое число:";
+		 cin >> firstDigit;
+		 cout << "Введите secondDigit - второе число:";
+		 cin >> secondDigit;
+		 
+		 // используя тернарный оператор, определяем максимум
+		 // и сразу записываем его в переменную max
+		 max = (firstDigit > secondDigit) ? firstDigit : secondDigit;
+		 
+		 // так же определяем и записываем min
+		 min = (firstDigit < secondDigit) ? firstDigit : secondDigit;
+		 
+		 /*// или так:
+		 if (max == firstDigit)
+		 min = secondDigit;
+		 else
+		 min = firstDigit;*/
+		 
+		 cout << "Максимум = " << max << endl;
+		 cout << "Минимум = " << min<< endl;
+		 
+		 return 0;
+	}
+	</code></pre>
+	<div class="text1">
+		<div class="text_block" id="block4">
+			<div class="block_text1">
+				<p>Рассмотрим строку 20. Код будет выполняться так – вначале отработает тернарный оператор, вернет значение исходя из поставленного условия, а после это значение запишется в переменную max. Если условие (firstDigit > secondDigit) – истина, значение firstDigit   записывается в max , если ложь, то записывается значение secondDigit. </p>
+			</div>
+		</div>
+	</div>
+	<footer>
+  	</footer>
+</body>
+</html>

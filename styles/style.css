@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #0f0f0f;
+}
+
+p {
+    font-size: 18px;
+}
+.text_block {
+    display: inline-flex;
+    padding-top: 3%;
+    padding-left: 10%;
+    max-width: 80%; /* Ограничиваем максимальную ширину блока */
+    z-index: 1;
+}
+
+.block_text {
+    padding-left: 4%; /* Используем относительные отступы */
+    z-index: 1;
+}
+
+.text_block img {
+    max-width: 37%; /* Делаем изображения адаптивными по ширине */
+    height: auto; /* Позволяем изображениям сохранять пропорции */
+    padding-left: 3%; /* Используем относительные отступы */
+    padding-top: 4%;
+    z-index: 1;
+}
+
+.block_text p {
+    color: white;
+    padding-top: 2%;
+    max-width: 80%; /* Ограничиваем максимальную ширину текста */
+}
+
+#block2 .block_text p {
+	max-width: 100%;
+}
+
+.block_text h1 {
+    color: white;
+    padding-top: 22%; /* Используем относительные отступы */
+}
+
+#block1 {
+    padding-top: 5%; /* Используем относительные отступы */
+}
+
+#block2 {
+    padding-left: 15%; /* Используем относительные отступы */
+    padding-top: 20%; /* Используем относительные отступы */
+}
+
+#block2 img {
+    padding-top: 4%; /* Используем относительные отступы */
+    padding-right: 10%
+}
+
+
+#block3 {
+    padding-top: 15%; /* Используем относительные отступы */
+}
+
+.text1 {
+    margin-top: -30px;
+}
+
+
+.block_text1 {
+    padding-left: 4%; /* Используем относительные отступы */
+    z-index: 1;
+}
+
+.block_text1 {
+    color: white;
+    padding-top: 2%;
+    max-width: 80%; /* Ограничиваем максимальную ширину текста */
+}
+
+.block_text1 h1 {
+    color: white;
+    padding-top: 5%; /* Используем относительные отступы */
+}
+
+.block_text1 p {
+    color: white;
+    padding-top: 2%;
+}
+
+.example h2 {
+    color: #c7c7c7;
+    margin-left: 13%;
+    padding-top: 3%;
+    font-size: 21px;
+    text-decoration: underline 1px;
+}
+
+.example {
+    margin-left: 6%;
+}
+
+.example p {
+     color: white;
+    padding-top: 2%;
+    max-width: 80%; /* Ограничиваем максимальную ширину текста */
+    margin-left: 14%;
+
+}
+
+#textexample {
+    margin-top: -20px;
+}
+
+#textexample1 {
+    color: white;
+    padding-top: 3%;
+    max-width: 70%; /* Ограничиваем максимальную ширину текста */
+    margin-left: 13.2%;
+}
+
+footer {
+    background-color: black;
+    margin-top: 200px;
+    height: 300px;
+}

@@ -1,0 +1,43 @@
+pre {
+	width: 57%;
+	margin-left: 13%;
+	margin-top: 2%;
+}
+
+
+
+
+
+.hljs{display:block;overflow-x:auto;padding:10px;background:white;color:black;-moz-tab-size: 3;-o-tab-size: 3;tab-size: 3;}
+
+.hljs-comment,.hljs-quote{color:#008000;}
+
+.hljs-variable{color:#000042;}
+
+.hljs-keyword,.hljs-selector-tag,.hljs-built_in,.hljs-name,.hljs-tag{color:#00f;}
+
+.hljs-string,.hljs-title,.hljs-section,.hljs-attribute,.hljs-literal,.hljs-template-tag,.hljs-template-variable,.hljs-type,.hljs-addition{color:#a31515;}
+
+.hljs-deletion,.hljs-selector-attr,.hljs-selector-pseudo,.hljs-meta{color:#2b91af;}
+
+.hljs-doctag{color:#808080;}
+
+.hljs-attr{color:#f00;}
+
+.hljs-symbol,.hljs-bullet,.hljs-link{color:#00b0e8;}
+
+.hljs-emphasis{font-style:italic;}
+
+.hljs-strong{font-weight:bold;}
+
+ 
+
+.hljs-ln-numbers{text-align:right;border-right: 1px solid #ccc;padding:0 5px 0 0!important;color:#999;-webkit-touch-callout: none;-webkit-user-select: none;-khtml-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;}
+
+.hljs-ln-code{padding:0 0 0 10px!important;}
+
+.example pre {
+	margin-top: 10px;
+	width: 23%;
+	margin-left: 14%;
+}
