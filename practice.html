@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Практика</title>
+	<link rel="stylesheet" href="styles/style.css">
+	<link rel="stylesheet" href="styles/mainMenu.css">
+	<link rel="stylesheet" href="styles/SyntaxHighlighting.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css">
+	<link rel="stylesheet" href="css/github.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/vs2015.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+<body>
+	<center>
+	<header>
+		<div class="ALL_header_menu"> 
+		<div class="Logo">
+			<a href="index.html"><i class="fa fa-home"></i></a>
+		</div>  
+		<div class="Top_menu">
+			<ul>
+				<div class="dropdown">
+					<li><a href="">Операторы</a></li>
+						 <div class="dropdown-content">
+	    				 	<a href="if_else.html">Оператор if и else</a>
+	   						<a href="ternal.html">Тернальный оператор</a>
+	   						<a href="switch.html">Оператор switch</a>
+	   						<a href="break.html">break и continue</a>
+	    				 </div>
+	    		</div>
+	    		<div class="dropdown1"> 
+	    			<li><a href="">Циклы</a></li>
+	    			 	<div class="dropdown-content1">
+	    				 	<a href="for.html">Цикл for</a>
+	   						<a href="while.html">Циклы while и do while</a>
+	   						<a href="nested.html">Вложенные констуркции в циклах</a>
+	    				</div>
+				</div>
+				<li><a href="practice.html">Практика</a></li>
+			</ul>
+		</div>
+    </div>
+	</header>
+	</center>
+
+	<div class="text1">
+		<div class="text_block" id="block4">
+			<div class="block_text1">
+				<h1>Задача 1</h1>
+				<p>Покажите, что приведенная программа не всегда верно определяет максимальное из трех чисел, записанных в переменные a, b, c: </p>
+			</div>
+		</div>
+	</div>
+		<pre><code class="обозначение_языка">
+		if (a > b) M = a;
+		else       M = b;
+		if (c > b) M = c;
+		else       M = b;
+		</code></pre>
+
+	<div class="text1">
+		<div class="text_block" id="block4">
+			<div class="block_text1">
+				<p>Приведите контрпример, то есть значения переменных, при котором в переменной M будет получен неверный ответ. Как нужно доработать программу, чтобы она сегда работала правильно?</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="text1">
+		<div class="text_block" id="block4">
+			<div class="block_text1">
+				<h1>Задача 2</h1>
+				<p>Напишите программу, которая вводит возраст человека (целое число, не превышающее 120) и выводит
+				этот возраст со словами "год", "года" или "лет".
+				<br><br>
+				Например, "21 год", "22 года", "25 лет".</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="text2">
+		<div class="text_block" id="block5">
+			<div class="block_text1">
+				<h1>Задача 3</h1>
+				<p>Найдите ошибку в данной программе. Как ее можно исправить?
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<pre><code class="обозначение_языка">
+		k = 0;
+		while (k < 10)
+			printf ( "привет\n" ); 
+		</code></pre>
+
+	<pre><code class="обозначение_языка">
+		k = 0;
+		while (k < 10)
+			cout << "привет" << endl;
+		</code></pre>
+
+	<div class="text2">
+		<div class="text_block" id="block4">
+			<div class="block_text1">
+				<h1>Задача 4</h1>
+				<p>Напишите программу, которая вводит натуральные числа a и b, и выводит сумму квадратов натуральных чисел в интервале от a до b.
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="text2">
+		<div class="text_block" id="block4">
+			<div class="block_text1">
+				<h1>Задача 5</h1>
+				<p>Напишите программу, которая вводит натуральное число N, и выводит на жкран все натуральные числа,
+				не превосхожящие N и делящиеся на каждую из своих цифр.
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="text2">
+		<div class="text_block" id="block4">
+			<div class="block_text1">
+				<h1>Задача 6</h1>
+				<p>Напишите программу, которая вводит возраст человека (целое число, не превышающее 120) и выводит
+				его прописью.
+				Например: 21 -> "двадцать один"
+				</p>
+			</div>
+		</div>
+	</div>
+
+
+
+	<footer>
+  	</footer>
+</body>
+</html>

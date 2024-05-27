@@ -8,7 +8,8 @@ body {
 }
 
 p {
-    font-size: 18px;
+    font-size: 16px;
+    font-family: Geneva, Arial, Helvetica, sans-serif;
 }
 .text_block {
     display: inline-flex;
@@ -32,7 +33,7 @@ p {
 }
 
 .block_text p {
-    color: white;
+    color: #b0b0b0;
     padding-top: 2%;
     max-width: 80%; /* Ограничиваем максимальную ширину текста */
 }
@@ -47,7 +48,7 @@ p {
 }
 
 #block1 {
-    padding-top: 5%; /* Используем относительные отступы */
+    padding-top: 6%; /* Используем относительные отступы */
 }
 
 #block2 {
@@ -65,6 +66,12 @@ p {
     padding-top: 15%; /* Используем относительные отступы */
 }
 
+#block5 {
+    padding-left: 12%; /* Используем относительные отступы */
+    z-index: 1;
+
+}
+
 .text1 {
     margin-top: -30px;
 }
@@ -76,7 +83,7 @@ p {
 }
 
 .block_text1 {
-    color: white;
+    color: #b0b0b0;
     padding-top: 2%;
     max-width: 80%; /* Ограничиваем максимальную ширину текста */
 }
@@ -87,8 +94,10 @@ p {
 }
 
 .block_text1 p {
-    color: white;
+    color: #b0b0b0;
     padding-top: 2%;
+    font-size: 16px;
+    font-family: Geneva, Arial, Helvetica, sans-serif;
 }
 
 .example h2 {
@@ -104,10 +113,12 @@ p {
 }
 
 .example p {
-     color: white;
+    color: #b0b0b0;
     padding-top: 2%;
     max-width: 80%; /* Ограничиваем максимальную ширину текста */
     margin-left: 14%;
+    font-size: 16px;
+    font-family: Geneva, Arial, Helvetica, sans-serif;
 
 }
 
@@ -116,7 +127,7 @@ p {
 }
 
 #textexample1 {
-    color: white;
+    color: #b0b0b0;
     padding-top: 3%;
     max-width: 70%; /* Ограничиваем максимальную ширину текста */
     margin-left: 13.2%;
