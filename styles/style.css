@@ -48,7 +48,7 @@ p {
 }
 
 #block1 {
-    padding-top: 6%; /* Используем относительные отступы */
+    padding-top: 10%; /* Используем относительные отступы */
 }
 
 #block2 {
@@ -135,6 +135,21 @@ p {
 
 footer {
     background-color: black;
-    margin-top: 200px;
-    height: 300px;
+    margin-top: 300px;
+    height: 400px;
+}
+
+#logoFooter {
+    width: 200px;
+    height: 200px;
+    margin-top: 115px;
+    margin-left: 100px;
+    transition: 0.5s;
+}
+
+
+footer p {
+    color: #b0b0b0;
+    margin-left: 44%;
+    margin-top: -110px;
 }

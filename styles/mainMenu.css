@@ -2,7 +2,7 @@ header {
   display: flex;
   justify-content: center;
   border-radius: 20px;
-  width: 40%; /* Используем относительную ширину */
+  width: 45%; /* Используем относительную ширину */
   margin: 40px auto 0; /* Центрируем по горизонтали и добавляем отступы */
   height: 50px;
   box-shadow: 0px 0px 3px black;
