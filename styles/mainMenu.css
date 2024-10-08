@@ -2,11 +2,11 @@ header {
   display: flex;
   justify-content: center;
   border-radius: 20px;
-  width: 45%; /* Используем относительную ширину */
-  margin: 40px auto 0; /* Центрируем по горизонтали и добавляем отступы */
+  width: 45%; 
+  margin: 40px auto 0; 
   height: 50px;
   box-shadow: 0px 0px 3px black;
-  position: relative; /* Добавляем позиционирование */
+  position: relative; 
   background: #0f0f0f;
 }
 
@@ -24,7 +24,7 @@ header {
 }
 
 .Logo i:hover {
-  text-shadow: 0px 0px 5px #6224ff;
+  text-shadow: 0px 0px 1px white;
   transition: 0.3s;
 }
 
@@ -39,12 +39,12 @@ header {
 }
 
 .Top_menu a {
-  padding: 45px; /* Убираем верхний отступ и добавляем отступы по бокам */
+  padding: 45px; 
   font-size: 16px;
   color: white;
   text-decoration: none;
   transition: 0.3s;
-  font-family: arial, "FontAwesome"; /* Объединяем шрифты */
+  font-family: arial, "FontAwesome"; 
 }
 
 
@@ -64,7 +64,7 @@ header {
   width: 130px;
   margin-left: 25px;
   margin-top: 25px;
-  animation: slideIn 0.3s ease forwards; /* Анимация появления */
+  animation: slideIn 0.3s ease forwards; 
   z-index: 2;
 }
 
@@ -75,23 +75,23 @@ header {
 @keyframes slideIn {
   from {
     opacity: 0;
-    transform: translateY(-10px); /* Двигаем блок вверх при появлении */
+    transform: translateY(-10px); 
   }
   to {
     opacity: 1;
-    transform: translateY(0); /* Конечное положение */
+    transform: translateY(0); 
   }
 }
 
 .dropdown-content a, .dropdown-content1 a {
   color: #ababab;
-  padding: 20px; /* Изменяем отступы */
+  padding: 20px; 
   text-decoration: none;
   display: block;
 }
 
 .dropdown-content a:hover, .dropdown-content1 a:hover {
-  color: white; /* Изменяем цвет при наведении */
+  color: white; 
 }
 
 .dropdown:hover .dropdown-content, .dropdown1:hover .dropdown-content1 {
